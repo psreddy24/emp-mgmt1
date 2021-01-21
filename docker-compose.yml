@@ -1,0 +1,10 @@
+version: '3'
+services:
+  backend:
+    build: ./emp-mgmt-backend
+    ports:
+      - "9092:9092"
+  frontend:
+    build: ./emp-mgmt-frontend
+    ports:
+      - "8080:80"

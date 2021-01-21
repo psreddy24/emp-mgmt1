@@ -1,0 +1,24 @@
+<h3>Update Employee</h3>
+
+<div id="result" class="alert alert-success" *ngIf="message" >{{message}}</div>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="employeeNum">Employee Number</label>
+      <input type="text" class="form-control" id="employeeNum" required [(ngModel)]="employee.employeeNum" name="employeeNum">
+    </div>
+
+    <div class="form-group">
+      <label for="employedDate">Employed Date</label>
+      <input type="date" class="form-control" id="employedDate" required [(ngModel)]="employee.employedDate" name="employedDate">
+    </div>
+
+    <div class="form-group">
+      <label for="terminatedDate">Terminated Date</label>
+      <input type="date" class="form-control" id="terminatedDate" required [(ngModel)]="employee.terminatedDate" name="terminatedDate">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button (click)="gotoList()" class="btn btn-primary"  style="float: right;">Back</button><br>
+  </form>
+</div>

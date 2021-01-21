@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3>Person Details</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" *ngIf="person">
+      <tbody>
+      <tr>
+        <td width="30%"><b>Person Id: </b></td>
+        <td>{{person.personId}}</td>
+      </tr>
+      <tr>
+        <td><b>First Name: </b></td>
+        <td>{{person.firstName}}</td>
+      </tr>
+      <tr>
+        <td><b>Last Name: </b></td>
+        <td>{{person.lastName}}</td>
+      </tr>
+      <tr>
+        <td><b>Birth Date: </b></td>
+        <td>{{person.birthDate}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Person List</button><br>

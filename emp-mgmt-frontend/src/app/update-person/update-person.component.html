@@ -1,0 +1,23 @@
+<h3>Update Person</h3>
+<div id="result" class="alert alert-success" *ngIf="message" >{{message}}</div>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">Person First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="person.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Person Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="person.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="birthDate">Date of birth</label>
+      <input type="date" class="form-control" id="birthDate" required [(ngModel)]="person.birthDate" name="birthDate">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button (click)="gotoList()" class="btn btn-primary"  style="float: right;">Back</button><br>
+  </form>
+</div>

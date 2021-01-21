@@ -1,0 +1,28 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="container">
+        <a class="navbar-brand">Employee Management System</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="employees">Employee List</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="add">Add Employee</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="persons">Person List</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="addPerson">Add Person</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+  <br><br><br>
+  <h3 style="text-align: center;">{{title}}</h3>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <span></span>
+  </div>
+</footer>

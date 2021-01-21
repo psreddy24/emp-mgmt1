@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3>Employee Details</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" *ngIf="employee">
+      <tbody>
+        <tr>
+          <td width="30%"><b>Employee Number: </b></td>
+          <td>{{employee.employeeNum}}</td>
+        </tr>
+        <tr>
+          <td><b>First Name: </b></td>
+          <td>{{employee.person.firstName}}</td>
+        </tr>
+        <tr>
+          <td><b>Last Name: </b></td>
+          <td>{{employee.person.lastName}}</td>
+        </tr>
+        <tr>
+          <td><b>Birth Date: </b></td>
+          <td>{{employee.person.birthDate}}</td>
+        </tr>
+        <tr>
+          <td><b>Employed Date: </b></td>
+          <td>{{employee.employedDate}}</td>
+        </tr>
+        <tr>
+          <td><b>Terminated Date: </b></td>
+          <td>{{employee.terminatedDate}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+<button (click)="list()" class="btn btn-primary"  style="float: right;">Back</button><br>

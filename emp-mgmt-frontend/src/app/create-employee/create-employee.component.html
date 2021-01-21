@@ -1,0 +1,38 @@
+<h3>Create Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Employee Number</label>
+      <input type="text" class="form-control" id="employeeNum" required [(ngModel)]="employeeRequest.employeeNum" name="employeeNum">
+    </div>
+
+    <div class="form-group">
+      <label for="employedDate">Employed Date</label>
+      <input type="date" class="form-control" id="employedDate" required [(ngModel)]="employeeRequest.employedDate" name="employedDate">
+    </div>
+
+    <div class="form-group">
+      <label>Terminated Date</label>
+      <input type="date" class="form-control" id="terminatedDate" [(ngModel)]="employeeRequest.terminatedDate" name="terminatedDate">
+    </div>
+
+    <div class="form-group">
+      <label for="personId">Person list:</label>
+      <select class="form-control" id="personId" required [(ngModel)]="employeeRequest.personId" name="personId">
+        <option *ngFor="let person of persons" [value]="person.personId">{{person.personId}} - {{person.firstName}} {{person.lastName}}</option>
+      </select>
+    </div>
+    <!--
+    <div class="form-group">
+      <label for="personId">Person Id </label>
+      <input type="text" class="form-control" id="personId" required [(ngModel)]="employeeRequest.personId" name="personId">
+    </div> -->
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

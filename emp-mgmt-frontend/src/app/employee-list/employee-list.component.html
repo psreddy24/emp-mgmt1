@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3>Employee List</h3>
+  </div>
+  <div id="result" class="alert alert-success" *ngIf="message" >{{message}}</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Emp No</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Birth date</th>
+          <th>Start Date</th>
+          <th>Terminated Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees | async ">
+          <td>{{employee.employeeNum}}</td>
+          <td>{{employee.person.firstName}}</td>
+          <td>{{employee.person.lastName}}</td>
+          <td>{{employee.person.birthDate}}</td>
+          <td>{{employee.employedDate}}</td>
+          <td>{{employee.terminatedDate}}</td>
+          <td><button (click)="updateEmployee(employee.employeeId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="deleteEmployee(employee.employeeId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            <button (click)="employeeDetails(employee.employeeId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
